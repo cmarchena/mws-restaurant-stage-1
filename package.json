@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cmarchena/mws-restaurant-stage-1#readme",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.2"
   }
 }
