@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/cmarchena/mws-restaurant-stage-1#readme",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-pixrem": "^1.0.0"
+    "grunt": "^1.0.2",
+    "grunt-responsive-images": "^1.10.1"
   }
 }

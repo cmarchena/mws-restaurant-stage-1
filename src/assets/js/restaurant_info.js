@@ -57,7 +57,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = DBHelper.imageUrlForRestaurantTablet(restaurant);
    // To Dinamically insert alt with restaurant name
   image.alt = restaurant.name + " " + restaurant.cuisine_type + " food restaurant New York City";
 
