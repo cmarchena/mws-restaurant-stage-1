@@ -331,6 +331,7 @@ nav h1 a {
     margin: 0;
     width: 100%;
     padding: 0;
+    min-width: 320px;
   }
 /* Start Media Queries */
 /* TABLET: 728px */
@@ -413,7 +414,7 @@ nav h1 a {
     list-style-type: none;
     margin: 0 0 1.875rem;
     overflow: hidden;
-    padding: 0 1.25rem 1.25rem;
+    padding: 2em 3em;
     position: relative;
     width: 85%;
   }

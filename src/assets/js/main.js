@@ -137,13 +137,15 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
-  const image = document.createElement('img');
-  image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurantTablet(restaurant);
-  // To Dinamically insert alt with restaurant name
-  image.alt = restaurant.name + " " + restaurant.cuisine_type + " food restaurant New York City";
-  li.append(image);
+  const picture = document.createElement('picture');
+  const srcsetDesktop = DBHelper.imageUrlForRestaurantDesktop(restaurant);
+  const srcsetTablet = DBHelper.imageUrlForRestaurantTablet(restaurant);
+  const srcsetMobile = DBHelper.imageUrlForRestaurantMobile(restaurant);
+  picture.innerHTML = `<source media="(min-width: 1024px)" srcset="${srcsetDesktop}">
+  <source media="(min-width: 728px)" srcset="${srcsetTablet}">
+  <img src="${srcsetMobile}" class="restaurant-img" alt="${restaurant.name} ${restaurant.cuisine_type} food restaurant New York City">`;
+  
+  li.append(picture);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
