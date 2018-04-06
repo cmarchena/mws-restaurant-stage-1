@@ -285,6 +285,7 @@ nav h1 a {
   list-style: outside none none;
   text-align: center;
   padding-left: 0;
+  min-width: 100vw;
 }
 
 
@@ -420,3 +421,22 @@ nav h1 a {
   }
 }
 /* End Media Queries */
+
+/* Ally classes */
+.skip-link {
+  background-color: black;
+  width: 13em;
+  padding: 5px;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  top: 0;
+  left: -13em;
+  z-index: 100;
+}
+.skip-link:focus{
+  left: 0;
+}
+.skip-link a{
+  color: red;
+}
