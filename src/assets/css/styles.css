@@ -83,10 +83,13 @@ nav{
   display: flex;
   justify-content: center;
 }
+/*TODO PROJECT REVIEW
+Remove margin from left and right in both the pages.
+*/
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  max-width: 80rem;
+  /* max-width: 80rem; */
   margin: 0 auto;
 }
 #footer {
@@ -202,7 +205,7 @@ nav h1 a {
   height: 12.5rem;
   right: 0;
   top: 5rem;
-  width: 100%;
+  width: 100vw;
   position: absolute;
 }
 .inside #map {
@@ -313,7 +316,7 @@ nav h1 a {
   width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h3 {
   /* A11y Changes: to improve ratio to 5 */
   /* color: #f18200; */
   color: #a85a00; 
@@ -419,7 +422,8 @@ nav h1 a {
   #restaurant-container{
     margin-top: 0;
   }
-  #reviews-container h2 {
+  #reviews-container h3 {
+    color: #f18200;
     text-align: left;
   }
 

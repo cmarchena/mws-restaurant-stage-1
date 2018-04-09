@@ -163,8 +163,10 @@ createRestaurantHTML = (restaurant) => {
   <img src="${srcsetMobile}" class="restaurant-img" alt="${restaurant.name} ${restaurant.cuisine_type} food restaurant New York City">`;
   
   li.append(picture);
+  // TODO PROJECT REVIEW
+  // Correct restaurant's name semantic mistake in index.html
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   li.append(name);
 

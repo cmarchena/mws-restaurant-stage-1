@@ -1,4 +1,4 @@
-let staticCacheName = "udacity-mws-restaurants-v3";
+let staticCacheName = "udacity-mws-restaurants-v5";
 self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
@@ -9,6 +9,7 @@ self.addEventListener("install", function(event) {
         "assets/js/main.js",
         "assets/js/restaurant_info.js",
         "assets/data/restaurants.json",
+        "assets/images/",
         "https://maps.googleapis.com/maps/api/js?key=AIzaSyACGz0tWs__s2RqU_lZ5dZc3PYTYn-O7-E&libraries=places&callback=initMap"
       ]);
     })

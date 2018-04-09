@@ -1,3 +1,19 @@
+// Service Worker
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js", { scope: '/' })
+    .then(function(reg) {
+      // registration worked
+      console.log("Registration succeeded. Scope is " + reg.scope);
+    })
+    .catch(function(error) {
+      // registration failed
+      console.log("Registration failed with " + error);
+    });
+}
+
+// End Service Worker
+
 let restaurant;
 var map;
 
@@ -100,7 +116,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -144,9 +160,13 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
+// TODO PROJECT review
+// The <ul> that is the breadcrumb needs to have the appropriate aria structure. Link: https://www.w3.org/TR/wai-aria-practices/examples/breadcrumb/index.html
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
+  breadcrumb.setAttribute("aria-label", "Breadcrumb");
   const li = document.createElement('li');
+  
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }
