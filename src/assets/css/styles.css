@@ -83,6 +83,10 @@ nav{
   display: flex;
   justify-content: center;
 }
+nav#breadcrumb{
+    height: 3.5em;
+    justify-content: left;
+}
 /*TODO PROJECT REVIEW
 Remove margin from left and right in both the pages.
 */

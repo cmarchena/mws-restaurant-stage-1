@@ -165,10 +165,11 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   breadcrumb.setAttribute("aria-label", "Breadcrumb");
+  const breadcrumbUl = document.getElementById("breadcrumb-ul");
   const li = document.createElement('li');
   
-  li.innerHTML = restaurant.name;
-  breadcrumb.appendChild(li);
+  li.innerHTML = `<a href="http://localhost:3001/restaurant.html?id=${restaurant.id}" aria-current="page">${restaurant.name}</a>`;
+  breadcrumbUl.appendChild(li);
 }
 
 /**
